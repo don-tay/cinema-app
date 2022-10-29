@@ -2,8 +2,8 @@
 INSERT INTO movies (title, year, director, rating, genre, description, image_url) VALUES
     ('The Shawshank Redemption', 1994, 'Frank Darabont', 9.3, 'Drama', 'Two imprisoned', 'https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg'),
     ('The Godfather', 1972, 'Francis Ford Coppola', 9.2, 'Crime', 'The aging patriarch', 'https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg'),
-    ('The Godfather: Part II', 1974, 'Francis Ford Coppola', 9.0, 'Crime', 'The early life', 'https://upload.wikimedia.org/wikipedia/en/0/02/The_Godfather_Part_II.jpg'),
-    ('The Dark Knight', 2008, 'Christopher Nolan', 9.0, 'Action', 'When the menace', 'https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg'),
+    ('The Godfather: Part II', 1974, 'Francis Ford Coppola', 9.0, 'Crime', 'The early life', 'https://upload.wikimedia.org/wikipedia/en/0/03/Godfather_part_ii.jpg'),
+    ('The Dark Knight', 2008, 'Christopher Nolan', 9.0, 'Action', 'When the menace', 'https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg'),
     ('12 Angry Men', 1957, 'Sidney Lumet', 8.9, 'Drama', 'A jury holdout', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/12_Angry_Men_%281957_film_poster%29.jpg/1280px-12_Angry_Men_%281957_film_poster%29.jpg');
 
 INSERT INTO showings (start_time, end_time, movie_id) VALUES
