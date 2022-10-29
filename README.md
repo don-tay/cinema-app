@@ -15,3 +15,4 @@ Cinema booking application in PHP, MySQL, HTML, CSS, and JavaScript.
 
 1. With docker compose: `docker compose up -d`
 2. Teardown: `docker compose down`
+3. Access the app at [http://localhost:8100](http://localhost:8100)
