@@ -19,13 +19,15 @@ CREATE TABLE IF NOT EXISTS showings (
 
 CREATE TABLE IF NOT EXISTS seats (
     seat_id SERIAL PRIMARY KEY,
-    seat_num VARCHAR(255) NOT NULL,
+    seat_num INTEGER NOT NULL,
     showing_id INTEGER NOT NULL REFERENCES showings(showing_id),
     CONSTRAINT seat_constraint UNIQUE (seat_num, showing_id)
 );
 
 CREATE TABLE IF NOT EXISTS tickets (
     ticket_id SERIAL PRIMARY KEY,
+    ticket_uid VARCHAR(255) UNIQUE NOT NULL,
     seat_id INTEGER UNIQUE NOT NULL REFERENCES seats(seat_id),
-    email VARCHAR(255) NOT NULL
+    email VARCHAR(255) NOT NULL,
+    is_ticketed BOOLEAN NOT NULL DEFAULT FALSE
 );
