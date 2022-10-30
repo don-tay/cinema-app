@@ -47,9 +47,9 @@ $seatIdsStr = implode(",", $seatIds);
           
       } else {
         if ($seatIdsStr !== '') {
-            $sql = "INSERT INTO tickets (seat_id, email) VALUES " . implode(',', array_map(function ($seatId) use ($fields) {
-            return "($seatId, '{$fields['email']}')";
-            }, $seatIds));
+            $sql = "INSERT INTO tickets (ticket_uid, seat_id, email) VALUES " . implode(',', array_map(function ($seatId) use ($fields) {
+            return "('" . uniqid('tix-') . "', " . $seatId . ", '" . $fields["email"] . "')";
+            }, $seatIds)) . ";";
             if ($conn->query($sql) === TRUE) {
                 $sql = "SELECT s.seat_id, s.seat_num, m.title, ss.start_time FROM seats s JOIN showings ss ON (s.showing_id = ss.showing_id) JOIN movies m ON (ss.movie_id = m.movie_id) WHERE s.seat_id IN (" . $seatIdsStr . ")";
                 $result = $conn->query($sql);

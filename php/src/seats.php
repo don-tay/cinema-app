@@ -21,9 +21,9 @@ if ($result->num_rows > 0) {
         $seats[] = $row;
     }
 }
-// sort seats from 2nd character of string onwards
+
 usort($seats, function($a, $b) {
-    return substr($a["seat_num"], 1) <=> substr($b["seat_num"], 1);
+    return $a["seat_num"] <=> $b["seat_num"];
 });
 ?>
 
