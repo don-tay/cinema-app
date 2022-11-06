@@ -47,13 +47,15 @@ if ($conn->connect_error) {
                             $timings = explode(",", $row['timings']);
                             sort($timings);
                             $timings = array_slice($timings, 0, 3);
-                            $timings = implode(", ", $timings);
                             echo "<div class='movie-card'>";
                             echo "<div class='movie-img-container'><img src='" . $row['image_url'] . "'></div>";
                             echo "<div class='movie-details'>";
                             echo "<a href='movie.php?id=" . $row['movie_id'] . "'><h3>" . $row['title'] . "</h3></a>";
                             echo "<p>" . $row['rating'] . " | " . $row['genre'] . "</p>";
-                            echo "<p>" . $timings . "</p>";
+                            // show timings as a list of <p> tags
+                            foreach ($timings as $timing) {
+                                echo "<p>" . $timing . "</p>";
+                            }
                             echo "</div>";
                             echo "</div>";
                         }

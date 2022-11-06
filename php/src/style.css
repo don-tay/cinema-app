@@ -121,7 +121,7 @@ a.navbar-item {
   padding: 20px;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -129,6 +129,7 @@ a.navbar-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 50%;
   height: 100%;
 }
 
