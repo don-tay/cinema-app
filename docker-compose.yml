@@ -14,7 +14,7 @@ services:
   db:
     container_name: mysql-db
     image: mysql
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: rootpwd
       MYSQL_DATABASE: cinema
